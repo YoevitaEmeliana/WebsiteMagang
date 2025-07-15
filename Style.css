@@ -634,6 +634,12 @@ header {
   background-color: #005599;
 }
 
+.tabel-jurnal thead th {
+  background-color: #003366;
+  color: white;
+}
+
+
 input[type="date"] {
   border: none;
   background: transparent;
@@ -802,6 +808,150 @@ select.kehadiran-dropdown:focus {
   background-color: #f0f0f0;
 }
 
+.info-pkl-content {
+  max-width: 2000px;
+  margin-top: 100px;
+  padding: 2rem;
+}
+
+.info-pkl-content section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-pkl-content section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 3px;
+}
+
+.legend-box.blue {
+  background-color: #005599;
+}
+
+#kalender-full {
+  margin-top: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#grafikUniversitas {
+  margin-top: 1rem;
+  max-width: 100%;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.2rem;
+}
+
+.tabel-permohonan input[type="file"] {
+  font-size: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.tabel-permohonan input[type="date"],
+.tabel-permohonan input[type="file"] {
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kuota-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-kuota {
+  flex: 1;
+  min-width: 150px;
+  background-color: #f1f5f9;
+  border-left: 5px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.card-kuota .label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.card-kuota .value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.card-kuota.total { border-color: #007bff; }
+.card-kuota.terisi { border-color: #28a745; }
+.card-kuota.sisa { border-color: #ffc107; }
+
+.signup-link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.user-info .profile-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  color: white;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -852,6 +1002,14 @@ select.kehadiran-dropdown:focus {
     width: 100%;
   }
 }
+
+ .info-pkl-content {
+    padding: 1rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1rem;
+  }
 
 
 

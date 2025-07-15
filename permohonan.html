@@ -38,7 +38,7 @@
         </div>
 
          <a href="index.html">Kontak</a>
-        <<a href="login.html" class="login-btn">Log In</a>
+        <a href="login.html" class="login-btn">Log In</a>
         <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
       </nav>
 
@@ -62,33 +62,40 @@
     <h2>Formulir Permohonan PKL</h2>
     <div class="table-container">
       <table class="tabel-permohonan" id="tabelPermohonan">
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Nama</th>
-            <th>Tempat Magang</th>
-            <th>Waktu Pengajuan</th>
-            <th>Tanggal Masuk</th>
-            <th>Tanggal Keluar</th>
-            <th>Nama Pembimbing</th>
-            <th>Status Validasi</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr contenteditable="true">
-            <td>1</td>
-            <td class="left"></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="left"></td>
-            <td></td>
-             <td><button class="hapus-btn">Hapus</button></td>
-          </tr>
-        </tbody>
-      </table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nama</th>
+          <th>Tempat Magang</th>
+          <th>Waktu Pengajuan</th>
+          <th>Tanggal Masuk</th>
+          <th>Tanggal Keluar</th>
+          <th>Nama Pembimbing</th>
+          <th>Status Validasi</th>
+          <th>Upload Berkas</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="left" contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td><input type="date" name="tanggalMasuk" /></td>
+          <td><input type="date" name="tanggalKeluar" /></td>
+          <td class="left" contenteditable="true"></td>
+          <td contenteditable="true"></td>
+          <td>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx" title="CV" /><br/>
+            <input type="file" name="proposal" accept=".pdf,.doc,.docx" title="Proposal Magang" /><br/>
+            <input type="file" name="ppt" accept=".pdf,.ppt,.pptx" title="PPT Magang" />
+          </td>
+          <td><button class="hapus-btn">Hapus</button></td>
+        </tr>
+      </tbody>
+    </table>
+
     </div>
     <button class="tambah-baris-btn" onclick="tambahBaris()">+ Tambah Baris</button>
     

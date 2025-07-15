@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Info PKL - Magang ESDM PATGTL</title>
+  <link rel="stylesheet" href="Style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <script src="Script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo-container">
+      <img src="logo-esdm.png" alt="Logo Pusat Air Tanah dan Geologi Tata Lingkungan" class="logo-img" />
+      <span class="logo-text">Pusat Air Tanah dan Geologi Tata Lingkungan</span>
+    </div>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#tentang">Tentang</a>
+      <a href="index.html#cara-mendaftar">Cara Mendaftar</a>
+
+      <div class="dropdown">
+        <span>Pengajuan PKL</span>
+        <div class="dropdown-content">
+            <a href="info-pkl.html">Info PKL</a>
+            <a href="permohonan.html">Permohonan PKL</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <span>Kegiatan PKL</span>
+        <div class="dropdown-content">
+            <a href="jurnal.html">Jurnal PKL</a>
+            <a href="presensi.html">Presensi PKL</a>
+            <a href="kunjungan.html">Catatan Kunjungan</a>
+        </div>
+      </div>
+
+      <a href="index.html#kontak">Kontak</a>
+      <a href="login.html" class="login-btn">Log In</a>
+      <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
+    </nav>
+    <div id="hamburger" class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<main class="info-pkl-content">
+<section class="kuota-info">
+  <h2>Kuota Magang</h2>
+  <div class="kuota-cards">
+    <div class="card-kuota total">
+      <span class="label">Total Kuota</span>
+      <span class="value">50</span>
+    </div>
+    <div class="card-kuota terisi">
+      <span class="label">Sudah Terisi</span>
+      <span class="value">38</span>
+    </div>
+    <div class="card-kuota sisa">
+      <span class="label">Sisa Kuota</span>
+      <span class="value">12</span>
+    </div>
+  </div>
+</section>
+
+  <section class="kalender-pkl">
+    <h2>Kalender Jadwal PKL</h2>
+    <div id="kalender-full"></div>
+    <p><span class="legend-box blue"></span> Slot Penuh</p>
+  </section>
+
+  <section class="grafik-peserta">
+    <h2>Statistik Peserta per Universitas</h2>
+    <canvas id="grafikUniversitas" height="100"></canvas>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Pusat Air Tanah dan Geologi Tata Lingkungan. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

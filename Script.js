@@ -13,45 +13,65 @@ function toggleMenu() {
 }
 
 function tambahBaris() {
-  const table = document.getElementById("tabelPermohonan").getElementsByTagName("tbody")[0];
+  const table = document.querySelector(".tabel-permohonan tbody");
   const rowCount = table.rows.length;
   const newRow = table.insertRow();
-  newRow.setAttribute("contenteditable", "true");
+  newRow.setAttribute("contenteditable", "false");
+
   newRow.innerHTML = `
     <td>${rowCount + 1}</td>
-    <td class="left"></td>
+    <td contenteditable="true" class="left"></td>
+    <td contenteditable="true"></td>
+    <td><input type="datetime-local"></td>
+    <td><input type="date"></td>
+    <td><input type="date"></td>
+    <td contenteditable="true" class="left"></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="left"></td>
-    <td></td>
+    <td>
+      <input type="file" name="cv" accept=".pdf,.doc,.docx" title="CV"><br/>
+      <input type="file" name="proposal" accept=".pdf,.doc,.docx" title="Proposal"><br/>
+      <input type="file" name="ppt" accept=".pdf,.ppt,.pptx" title="PPT Magang"><br/>
+      <button class="hapus-btn">Hapus</button>
+    </td>
   `;
+
+  // Tombol hapus aktif
+  newRow.querySelector(".hapus-btn").addEventListener("click", function () {
+    newRow.remove();
+    updateNomor();
+  });
+}
+function tambahBaris() {
+  const table = document.querySelector(".tabel-permohonan tbody");
+  const rowCount = table.rows.length;
+  const newRow = table.insertRow();
+  newRow.setAttribute("contenteditable", "false");
+
+  newRow.innerHTML = `
+    <td>${rowCount + 1}</td>
+    <td contenteditable="true" class="left"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true" placeholder="Misal: 10 Juli 2025"></td>
+    <td><input type="date"></td>
+    <td><input type="date"></td>
+    <td contenteditable="true" class="left"></td>
+    <td></td>
+    <td>
+      <input type="file" name="cv" accept=".pdf,.doc,.docx" title="CV"><br/>
+      <input type="file" name="proposal" accept=".pdf,.doc,.docx" title="Proposal"><br/>
+      <input type="file" name="ppt" accept=".pdf,.ppt,.pptx" title="PPT">
+    </td>
+    <td>
+      <button class="hapus-btn">Hapus</button>
+    </td>
+  `;
+
+  newRow.querySelector(".hapus-btn").addEventListener("click", function () {
+    newRow.remove();
+    updateNomor();
+  });
 }
 
-  function tambahBaris() {
-    const table = document.querySelector(".tabel-permohonan tbody");
-    const rowCount = table.rows.length;
-    const newRow = table.insertRow();
-
-    newRow.setAttribute("contenteditable", "true");
-    newRow.innerHTML = `
-      <td>${rowCount + 1}</td>
-      <td class="left"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class="left"></td>
-      <td></td>
-      <td><button class="hapus-btn">Hapus</button></td>
-    `;
-
-    newRow.querySelector(".hapus-btn").addEventListener("click", function () {
-      newRow.remove();
-      updateNomor();
-    });
-  }
 
   function updateNomor() {
     const rows = document.querySelectorAll(".tabel-permohonan tbody tr");
@@ -246,4 +266,73 @@ function loginDummy(event) {
 function loginGoogleDummy() {
   alert("Login dengan Google berhasil (dummy).");
   window.location.href = "index.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Render Kalender FullCalendar
+  const calendarEl = document.getElementById("kalender-full");
+  if (calendarEl) {
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      height: 'auto',
+      headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: ''
+      },
+      events: [
+        {
+          title: 'Slot Penuh',
+          start: '2025-08-01',
+          end: '2025-08-31',
+          display: 'background',
+          backgroundColor: '#007bff'
+        },
+        {
+          title: 'Slot Penuh',
+          start: '2025-10-01',
+          end: '2025-10-31',
+          display: 'background',
+          backgroundColor: '#007bff'
+        }
+      ]
+    });
+    calendar.render();
+  }
+
+  // Render Grafik Universitas
+  const ctx = document.getElementById("grafikUniversitas");
+  if (ctx) {
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['ITERA', 'UNPAD', 'PERTAMINA', 'ITB'],
+        datasets: [{
+          label: 'Jumlah Mahasiswa',
+          data: [6, 8, 5, 7, 4],
+          backgroundColor: '#005599'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 1
+            }
+          }
+        }
+      }
+    });
+  }
+});
+
+function signupDummy(event) {
+  event.preventDefault();
+  alert("Pendaftaran berhasil (dummy). Anda akan diarahkan ke halaman login.");
+  window.location.href = "login.html";
 }
