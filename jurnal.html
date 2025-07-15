@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jurnal PKL - Magang ESDM PATGTL</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script src="Script.js" defer></script>
+</head>
+<body>
+
+    <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="logo-esdm.png" alt="Logo ESDM" class="logo-img" />
+        <span class="logo-text">Pusat Air Tanah dan Geologi Tata Lingkungan</span>
+      </div>
+      <nav id="nav-links" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html">Tentang</a>
+        <a href="index.html">Cara Mendaftar</a>
+
+        <div class="dropdown">
+          <span>Pengajuan PKL</span>
+          <div class="dropdown-content">
+              <a href="info-pkl.html">Info PKL</a>
+              <a href="permohonan.html">Permohonan PKL</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span>Kegiatan PKL</span>
+          <div class="dropdown-content">
+              <a href="jurnal.html">Jurnal PKL</a>
+              <a href="presensi.html">Presensi PKL</a>
+              <a href="kunjungan.html">Catatan Kunjungan</a>
+          </div>
+        </div>
+
+         <a href="index.html">Kontak</a>
+        <<a href="login.html" class="login-btn">Log In</a>
+        <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
+      </nav>
+
+      <div id="hamburger" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+<main class="jurnal-content">
+  <section class="jurnal-controls">
+    <div class="print-buttons">
+      <button class="print-btn" onclick="window.print()">
+        <img src="https://cdn-icons-png.flaticon.com/24/2787/2787698.png" alt="Print Icon" class="icon-print" />
+        Cetak Data Jurnal PKL
+      </button>
+    </div>
+
+    <div class="show-entries">
+      <label for="entryCount">Show entries:</label>
+      <select id="entryCount" onchange="ubahJumlahEntri(this.value)">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="form-jurnal-section">
+    <div class="table-container">
+      <table class="tabel-jurnal" id="tabelJurnal">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Tanggal Pelaksanaan</th>
+            <th>Topik Pekerjaan</th>
+            <th>Dokumentasi</th>
+            <th>Tujuan Kegiatan</th>
+            <th>Catatan Pembimbing</th>
+            <th>Status Validasi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <button class="tambah-baris-btn" onclick="tambahBarisJurnal()">+ Tambah Entri</button>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <p>&copy; 2025 Pusat Air Tanah dan Geologi Tata Lingkungan. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

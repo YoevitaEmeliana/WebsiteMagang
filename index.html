@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beranda - Magang ESDM PATGTL</title>
+  <link rel="stylesheet" href="Style.css"/>
+  <script src="Script.js" defer></script>
+
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="logo-esdm.png" alt="Logo ESDM" class="logo-img" />
+        <span class="logo-text">Pusat Air Tanah dan Geologi Tata Lingkungan</span>
+      </div>
+      <nav id="nav-links" class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#cara-mendaftar">Cara Mendaftar</a>
+
+        <div class="dropdown">
+          <span>Pengajuan PKL</span>
+          <div class="dropdown-content">
+              <a href="info-pkl.html">Info PKL</a>
+              <a href="permohonan.html">Permohonan PKL</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span>Kegiatan PKL</span>
+          <div class="dropdown-content">
+              <a href="jurnal.html">Jurnal PKL</a>
+              <a href="presensi.html">Presensi PKL</a>
+              <a href="kunjungan.html">Catatan Kunjungan</a>
+          </div>
+        </div>
+
+        <a href="#kontak">Kontak</a>
+        <a href="login.html" class="login-btn">Log In</a>
+        <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
+      </nav>
+
+      <div id="hamburger" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main class="home-content" id="home">
+    <h1>Magang Kementerian Energi dan Sumber Daya Mineral</h1>
+    <h2>Selamat Datang di Aplikasi Magang ESDM PATGTL</h2>
+    <p>Portal resmi untuk pendaftaran dan informasi magang di lingkungan PATGTL.</p>
+    <a href="permohonan.html" class="cta-button">Daftar Sekarang</a>
+  </main>
+
+  <section class="benefits-section" id="tentang">
+  <h2 class="section-title">Apa saja manfaat yang bisa kamu peroleh saat mengikuti program magang di PATGTL Kementerian ESDM?</h2>
+  
+  <div class="benefit-slider">
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/1253/1253656.png" alt="Pengembangan">
+      <h3>Pengembangan</h3>
+      <p>Meningkatkan kemampuan teknis dan interpersonal melalui pembelajaran lapangan dan pembimbingan langsung.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/9750/9750936.png" alt="Pengalaman">
+      <h3>Pengalaman</h3>
+      <p>Terlibat dalam kegiatan geologi terapan yang mendekatkan teori dengan praktik profesional di instansi pemerintah.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/1556/1556221.png" alt="Alat & Software">
+      <h3>Alat & Software</h3>
+      <p>Berkenalan dengan berbagai alat dan software pendukung pemetaan serta analisis geospasial yang digunakan di PATGTL.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/4157/4157083.png" alt="Sertifikat">
+      <h3>Sertifikat</h3>
+      <p>Mendapatkan sertifikat resmi sebagai bukti partisipasi dan capaian selama program magang.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/1728/1728431.png" alt="Tugas Akhir">
+      <h3>Topik Tugas Akhir</h3>
+      <p>Proyek nyata selama magang dapat dijadikan bahan tugas akhir dengan pendampingan dari mentor ahli.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/12454/12454114.png" alt="Budaya Kerja">
+      <h3>Budaya Kerja</h3>
+      <p>Menginternalisasi nilai-nilai yang menjadi budaya kerja di lingkungan Kementerian ESDM.</p>
+    </div>
+    <div class="benefit-card">
+      <img src="https://cdn-icons-png.flaticon.com/64/9402/9402503.png" alt="Proyek Nyata">
+      <h3>Proyek Nyata</h3>
+      <p>Berpartisipasi langsung dalam penanganan studi lapangan dan kasus riil lintas disiplin di PATGTL.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cara-mendaftar" class="cara-mendaftar-section">
+  <h2>Cara Mendaftar Magang di PATGTL</h2>
+  <p class="subtitle">Ikuti langkah-langkah berikut untuk menjadi bagian dari program magang kami.</p>
+
+  <div class="step-grid">
+    <div class="step-card">
+      <img src="registration.png" alt="Registration">
+      <h3>Registrasi</h3>
+      <p>Mulailah dengan mengisi formulir pendaftaran secara online melalui sistem kami.</p>
+    </div>
+    <div class="step-card">
+      <img src="administration.png" alt="Administration">
+      <h3>Administrasi</h3>
+      <p>Lengkapi data diri dan unggah CV. Jika lolos seleksi administrasi, kamu akan dihubungi lebih lanjut.</p>
+    </div>
+    <div class="step-card">
+      <img src="onjob.png" alt="On Job">
+      <h3>Pelaksanaan</h3>
+      <p>Jalankan kegiatan magang sesuai dengan durasi dan bidang yang telah ditentukan.</p>
+    </div>
+    <div class="step-card">
+      <img src="graduate.png" alt="Graduate">
+      <h3>Selesai</h3>
+      <p>Setelah menyelesaikan magang, kamu akan mendapatkan sertifikat resmi dari PATGTL.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="kontak" class="kontak-section">
+  <h2>Kontak Kami</h2>
+  <div class="kontak-container">
+    <div class="kontak-info">
+      <h3>Pusat Air Tanah dan Geologi Tata Lingkungan</h3>
+      <p>Jl. Diponegoro No.57, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122</p>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/64/2875/2875394.png" alt="Email Icon" class="kontak-icon" />
+        <a href="mailto:patgtl@esdm.go.id">patgtl@esdm.go.id</a>
+      </p>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/64/455/455907.png" alt="Phone Icon" class="kontak-icon" />
+        Telepon: (022) 7274676
+      </p>
+      <div class="sosmed">
+        <p><strong>Follow Our Social Media:</strong></p>
+        <a href="https://www.instagram.com/infopag?igsh=bm95Z2gwcnQ5M25y" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/64/2111/2111421.png" alt="Instagram" class="kontak-icon" />
+          @infopag
+        </a>
+      </div>
+      <div class="jam-layanan">
+       <div class="jam-layanan">
+        <p><strong>Waktu Layanan:</strong></p>
+        <p>Hari Kerja (Senin - Jumat)<br>Pukul 08.00 - 16.00 WIB</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="kontak-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.91217718934!2d107.62082199999999!3d-6.9011059999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64c8c038a0b%3A0x2816c21e1461f04c!2sPusat%20Air%20Tanah%20dan%20Geologi%20Tata%20Lingkungan!5e0!3m2!1sen!2sid!4v1752503530403!5m2!1sen!2sid" 
+        width="100%" 
+        height="400" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Pusat Air Tanah dan Geologi Tata Lingkungan. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presensi PKL - Magang ESDM PATGTL</title>
+  <link rel="stylesheet" href="Style.css" />
+  <script defer src="Script.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo-container">
+      <img src="logo-esdm.png" alt="Logo ESDM" class="logo-img" />
+      <span class="logo-text">Pusat Air Tanah dan Geologi Tata Lingkungan</span>
+    </div>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html">Tentang</a>
+      <a href="index.html">Cara Mendaftar</a>
+      <div class="dropdown">
+        <span>Pengajuan PKL</span>
+        <div class="dropdown-content">
+          <a href="info-pkl.html">Info PKL</a>
+          <a href="permohonan.html">Permohonan PKL</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span>Kegiatan PKL</span>
+        <div class="dropdown-content">
+          <a href="jurnal.html">Jurnal PKL</a>
+          <a href="presensi.html">Presensi PKL</a>
+          <a href="kunjungan.html">Catatan Kunjungan</a>
+        </div>
+      </div>
+      <a href="index.html">Kontak</a>
+      <<a href="login.html" class="login-btn">Log In</a>
+      <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
+    </nav>
+    <div id="hamburger" class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
+<main class="jurnal-content">
+  <section class="jurnal-controls">
+    <div class="show-entries">
+      <label for="entryCountPresensi">Show entries:</label>
+      <select id="entryCountPresensi" onchange="ubahJumlahEntri(this.value)">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <div class="search-bar">
+      <label for="searchInput">Search:</label>
+      <input type="text" id="searchInput" onkeyup="cariPresensi()" placeholder="Cari nama...">
+    </div>
+  </section>
+
+  <section class="form-jurnal-section">
+    <div class="table-container">
+      <table class="tabel-jurnal" id="tabelPresensi">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Tanggal Presensi</th>
+            <th>Keterangan</th>
+            <th>Status Kehadiran</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <button class="tambah-baris-btn" onclick="tambahBarisPresensi()">+ Tambah Entri</button>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Pusat Air Tanah dan Geologi Tata Lingkungan. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+

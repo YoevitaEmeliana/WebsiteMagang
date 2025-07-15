@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Permohonan PKL - Magang ESDM PATGTL</title>
+  <link rel="stylesheet" href="Style.css" />
+   <script src="Script.js" defer></script>
+</head>
+<body>
+
+    <header>
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="logo-esdm.png" alt="Logo ESDM" class="logo-img" />
+        <span class="logo-text">Pusat Air Tanah dan Geologi Tata Lingkungan</span>
+      </div>
+      <nav id="nav-links" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html">Tentang</a>
+        <a href="index.html">Cara Mendaftar</a>
+
+        <div class="dropdown">
+          <span>Pengajuan PKL</span>
+          <div class="dropdown-content">
+              <a href="info-pkl.html">Info PKL</a>
+              <a href="permohonan.html">Permohonan PKL</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <span>Kegiatan PKL</span>
+          <div class="dropdown-content">
+              <a href="jurnal.html">Jurnal PKL</a>
+              <a href="presensi.html">Presensi PKL</a>
+              <a href="kunjungan.html">Catatan Kunjungan</a>
+          </div>
+        </div>
+
+         <a href="index.html">Kontak</a>
+        <<a href="login.html" class="login-btn">Log In</a>
+        <div id="close-btn" class="close-btn" onclick="toggleMenu()">✖</div>
+      </nav>
+
+      <div id="hamburger" class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+<main class="permohonan-content">
+  <section class="notif-diterima">
+    <h2>Selamat, Permohonan PKL Anda Diterima!</h2>
+    <p>Permohonan PKL Anda telah diterima oleh pihak <strong>Pusat Air Tanah dan Geologi Tata Lingkungan</strong>.</p>
+    <p><strong>Tanggal Masuk Pelaksanaan PKL:</strong><br>1 Agustus 2025</p>
+    <p><strong>Tanggal Usai Pelaksanaan PKL:</strong><br>30 September 2025</p>
+    <p><strong>Status Keanggotaan Kelompok PKL:</strong><br>Ketua</p>
+    <p><strong>Nama Dosen Pembimbing:</strong><br>Dr. Aray S.Pd., M.T.</p>
+    <p>Silakan mempersiapkan diri untuk memulai pelaksanaan PKL. Semoga sukses!</p>
+    <p>Jika terdapat pernyataan terkait PKL, silakan hubungi koordinator PKL, Bapak/Ibu dosen, koordinator jurusan di program studi Anda.</p>
+  </section>
+
+  <section class="form-pkl-section">
+    <h2>Formulir Permohonan PKL</h2>
+    <div class="table-container">
+      <table class="tabel-permohonan" id="tabelPermohonan">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Nama</th>
+            <th>Tempat Magang</th>
+            <th>Waktu Pengajuan</th>
+            <th>Tanggal Masuk</th>
+            <th>Tanggal Keluar</th>
+            <th>Nama Pembimbing</th>
+            <th>Status Validasi</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr contenteditable="true">
+            <td>1</td>
+            <td class="left"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="left"></td>
+            <td></td>
+             <td><button class="hapus-btn">Hapus</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="tambah-baris-btn" onclick="tambahBaris()">+ Tambah Baris</button>
+    
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Pusat Air Tanah dan Geologi Tata Lingkungan. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
